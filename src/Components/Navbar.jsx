@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
         <form className="flex" onSubmit={handleSubmit}>
             <button className="flex justify-center items-center bg-gray-100 text-gray-600 w-[3rem]  gap-3  px-6 md:w-[7rem]  py-[8.6px]  border rounded-l-lg"><i className="fa-regular fa-image"></i><span className='hidden md:inline-block'>Photo</span></button>
-            <input required onChange={(e)=>{setItems(e.target.value)}} value={items} type="text" className="outline-none py-2 px-2 md:w-[30rem]  border bg-gray-100" placeholder="free wallpaper"/>
+            <input required onChange={(e)=>{setItems(e.target.value)}} value={items} type="text" className="outline-none py-2 px-2 md:w-[30rem] w-[20rem] border bg-gray-100" placeholder="free wallpaper"/>
             <button type='submit' className="bg-[#05a081] px-3 py-[8.6px] md:w-[5rem] border text-white rounded-r-lg">Search</button>
         </form>
         <ul className="md:flex gap-6 justify-center items-center hidden">
