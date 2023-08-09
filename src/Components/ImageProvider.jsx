@@ -16,7 +16,6 @@ const ImageProvider=({children})=>{
       let res=await fetch(url);
       let data= await res.json()
       setPhotos(data.results)
-    //   console.log(data.results)
 
     } catch (error) {
       console.log(error)
@@ -25,11 +24,13 @@ const ImageProvider=({children})=>{
     useEffect(()=>{
       getPhotos();
     },[url])
+   
+    
 
 
     let filteredImage=photos;
 
-    return <ImageContext.Provider value={{filteredImage,setQuery,query}}>
+    return <ImageContext.Provider value={{filteredImage,setQuery,query,page,setPage,setPhotos,photos}}>
         {children}
     </ImageContext.Provider>
 }

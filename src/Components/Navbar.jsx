@@ -6,13 +6,12 @@ import { ImageContext } from './ImageContext';
 
 const Navbar = () => {
 
- const{setQuery,query}=useContext(ImageContext)
+ const{setQuery}=useContext(ImageContext)
  const [items,setItems]=useState('')
 
   const handleSubmit=(e)=>{
    e.preventDefault();
    setQuery(items)
-   console.log(query)
   
   }
 

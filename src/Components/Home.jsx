@@ -6,7 +6,7 @@ import { ImageContext } from "./ImageContext"
 
 const Home = () => {
 
-const {filteredImage,query}=useContext(ImageContext)
+const {filteredImage,query,page,setPage}=useContext(ImageContext)
 
 const [items,setItems]=useState([])
 const addTo=(item)=>{
@@ -19,13 +19,19 @@ const [downloadUrl,setDownloadUrl]=useState("")
 const handleDownload=()=>{
  saveAs(downloadUrl,'Image')
 }
+
+
+const handleMore=()=>{
+setPage(page+1)
+}
+
     
   return (
     <>
      <section className="home-container">
       <div className="header-section">
       <h1 className="text-4xl font-bold capitalize">Free {query} Wallpaper Download</h1>
-       <button className="bg-gray-800 text-white w-[8rem] p-3 rounded-full my-5 font-bold">Photos <span className="font-semibold text-gray-400">{filteredImage.length}k</span></button>
+       <button className="bg-gray-800 text-white w-[8rem] p-3 rounded-full my-5 font-bold">Photos <span className="font-semibold text-gray-400">{query.length}k</span></button>
       </div>
       <section className="image-section">
       {filteredImage.map((photo)=>{
@@ -60,6 +66,7 @@ const handleDownload=()=>{
       </a>
       })}
       </section>
+      <button onClick={handleMore} className="font-bold bg-[#05a081] text-white py-2 w-[15rem] rounded block m-auto mt-5">More</button>
      </section>
 
      {show &&(

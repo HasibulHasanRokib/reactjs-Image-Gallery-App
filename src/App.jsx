@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Components/Home"
 import Navbar from "./Components/Navbar"
-// import Image from "./Components/Image"
+import Footer from "./Components/Footer"
 
 function App() {
 
@@ -11,8 +11,8 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        {/* <Route path="/:id" element={<Image/>}/> */}
       </Routes>
+      <Footer/>
     </BrowserRouter>
     
     </>
