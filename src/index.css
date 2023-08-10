@@ -26,6 +26,8 @@ ol[role='list'] {
   list-style: none;
 }
 
+
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -127,6 +129,8 @@ border-radius: 5px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  /* backdrop-filter: blur(5px); */
+
 }
 .popUp-display{
   background-color: #ffffff;
